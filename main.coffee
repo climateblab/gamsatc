@@ -8,7 +8,7 @@ fig = figure
     xlabel: "Year"
     ylabel: "Temp (deg C)"
 
-plotData $blab.gamsatc
+plotData $blab.resources.getJSON "data.json"
 
 
-#
+
