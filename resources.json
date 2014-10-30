@@ -1,6 +1,6 @@
 [
+    {"url": "data.json", "id": "gamsatc_data"},
     "main.html",
     "main.css",
-    "data.json",
     "main.coffee"
 ]

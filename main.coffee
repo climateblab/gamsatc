@@ -1,14 +1,18 @@
-plotData = (data) ->
+parseData = (data) ->
+    return null unless data
     year = (parseInt(y) for y, t of data)
     tempC = (t for y, t of data)
-    plot year, tempC, fig: fig
+    {year, tempC}
 
-# Global Annual Mean Surface Air Temp. Change
-fig = figure
+data = $blab.resource "gamsatc_data"#;
+
+{year, tempC} = parseData data #;
+
+# Global Ann. Mean Surf. Air Temp. Change
+plot year, tempC,
     xlabel: "Year"
     ylabel: "Temp (deg C)"
 
-plotData $blab.resources.getJSON "data.json"
 
 
 
